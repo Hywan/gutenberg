@@ -247,8 +247,7 @@ class ParagraphBlock extends Component {
 						} );
 					} }
 					onSplit={ insertBlocksAfter ?
-						( before, after, ...blocks ) => {
-							setAttributes( { content: before } );
+						( after, ...blocks ) => {
 							insertBlocksAfter( [
 								...blocks,
 								createBlock( 'core/paragraph', { content: after } ),
